@@ -1,5 +1,6 @@
 <?php
   
+  namespace DDD\Product\Domain\ValueObjects;
   final class ProductName
   {
     private string $name;
@@ -13,11 +14,6 @@
       $this->name = $name;
     }
     
-    public function __toString()
-    {
-      return $this->name;
-    }
-    
     /**
      * @throws Exception
      */
@@ -26,5 +22,10 @@
       if (strlen($name) === 0) {
         throw new Exception('El nombre no puede estar vacío');
       }
+    }
+    
+    public function __toString()
+    {
+      return $this->name;
     }
   }

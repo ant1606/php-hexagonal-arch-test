@@ -1,5 +1,10 @@
 <?php
   
+  namespace DDD\Product\Domain;
+  
+  use DDD\Product\Domain\ValueObjects\ProductId;
+  use DDD\Product\Domain\ValueObjects\ProductName;
+  
   final class Product
   {
     private ProductId $id;
@@ -10,7 +15,7 @@
       $this->id = $id;
       $this->name = $name;
     }
-  
+    
     /**
      * @return ProductId
      */
@@ -18,7 +23,7 @@
     {
       return $this->id;
     }
-  
+    
     /**
      * @return ProductName
      */

@@ -1,6 +1,14 @@
 <?php
-  interface RetrieveProductUseCase{
+  
+  namespace DDD\Product\Domain\Ports\in;
+  
+  use DDD\Product\Domain\Product;
+  use DDD\Product\Domain\ValueObjects\ProductId;
+  
+  interface RetrieveProductUseCase
+  {
     public function getProductById(ProductId $id): Product|null;
+    
     /**
      * Obtiene todos los productos.
      *
